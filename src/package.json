@@ -1,8 +1,9 @@
 {
   "name": "vscode-htmleta",
-  "displayName": "vscode-htmleta",
+  "displayName": "η Eta",
   "description": "HTML with Eta syntax highlighting, JS embedding, and file icons",
   "version": "1.0.0",
+  "icon": "icons/eta-light.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/forafekt/vscode-htmleta.git"
