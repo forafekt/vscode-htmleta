@@ -1,0 +1,172 @@
+{
+  "ETA No Output": {
+    "prefix": "eta",
+    "body": [
+      "<% $1 %>$2"
+    ],
+    "description": "ETA No Output"
+  },
+  "ETA Output Value": {
+    "prefix": "etaout",
+    "body": [
+      "<%= $1 %>$2"
+    ],
+    "description": "ETA outputs no value"
+  },
+  "ETA Output Escaped": {
+    "prefix": "etaesc",
+    "body": [
+      "<%- $1 %>$2"
+    ],
+    "description": "ETA outputs value"
+  },
+  "ETA Comment": {
+    "prefix": "etacom",
+    "body": [
+      "<%# $1 %>$2"
+    ],
+    "description": "ETA comment tag with no output"
+  },
+  "ETA Literal": {
+    "prefix": "etalit",
+    "body": [
+      "<%% $1 %>$2"
+    ],
+    "description": "ETA outputs a literal '<%'"
+  },
+  "ETA Include": {
+    "prefix": "etainc",
+    "body": [
+      "<%- include('$1') %>$2"
+    ],
+    "description": "ETA include statement"
+  },
+  "ETA For Loop": {
+    "prefix": "etafor",
+    "body": [
+      "<% for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { %>",
+      "$3",
+      "<% } %>"
+    ],
+    "description": "ETA For Loop"
+  },
+  "ETA ForEach": {
+    "prefix": "etaeach",
+    "body": [
+      "<% ${1:array}.forEach(${2:element} => { %>",
+      " $3",
+      "<% }) %>"
+    ],
+    "description": "ETA ForEach Loop"
+  },
+  "ETA If Statement": {
+    "prefix": "etaif",
+    "body": [
+      "<% if (${1:condition}) { %>",
+      " $2",
+      "<% } %>"
+    ],
+    "description": "ETA if statement"
+  },
+  "ETA Else Statement": {
+    "prefix": "etaelse",
+    "body": [
+      "<% } else { %>",
+      " $1"
+    ],
+    "description": "ETA if statement"
+  },
+  "ETA Else If Statement": {
+    "prefix": "etaelif",
+    "body": [
+      "<% } else if ({$1:condition}) { %>",
+      " $2"
+    ],
+    "description": "ETA if statement"
+  },
+  "ETA TAG": {
+    "prefix": "<%",
+    "body": [
+      "<% $1 %>$2"
+    ],
+    "description": "ETA No Output"
+  },
+  "ETA TAG Output Value": {
+    "prefix": "<%=",
+    "body": [
+      "<%= $1 %>$2"
+    ],
+    "description": "ETA outputs no value"
+  },
+  "ETA TAG Output Escaped": {
+    "prefix": "<%-",
+    "body": [
+      "<%- $1 %>$2"
+    ],
+    "description": "ETA outputs value"
+  },
+  "ETA TAG Comment": {
+    "prefix": "<%#",
+    "body": [
+      "<%# $1 %>$2"
+    ],
+    "description": "ETA comment tag with no output"
+  },
+  "ETA TAG Literal": {
+    "prefix": "<%%",
+    "body": [
+      "<%% $1 %>$2"
+    ],
+    "description": "ETA outputs a literal '<%'"
+  },
+  "ETA TAG Include": {
+    "prefix": "<% ",
+    "body": [
+      "<%- include('$1') %>$2"
+    ],
+    "description": "ETA include statement"
+  },
+  "ETA TAG For Loop": {
+    "prefix": "<% ",
+    "body": [
+      "<% for( let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++ ) { %>",
+      "$3",
+      "<% } %>"
+    ],
+    "description": "ETA For Loop"
+  },
+  "ETA TAG ForEach": {
+    "prefix": "<% ",
+    "body": [
+      "<% ${1:array}.forEach(${2:element} => { %>",
+      " $3",
+      "<% }) %>"
+    ],
+    "description": "ETA ForEach Loop"
+  },
+  "ETA TAG If Statement": {
+    "prefix": "<% ",
+    "body": [
+      "<% if (${1:condition}) { %>",
+      " $2",
+      "<% } %>"
+    ],
+    "description": "ETA if statement"
+  },
+  "ETA TAG Else Statement": {
+    "prefix": "<% ",
+    "body": [
+      "<% } else { %>",
+      " $1"
+    ],
+    "description": "ETA if statement"
+  },
+  "ETA TAG Else If Statement": {
+    "prefix": "<% ",
+    "body": [
+      "<% } else if ({$1:condition}) { %>",
+      " $2"
+    ],
+    "description": "ETA if statement"
+  }
+}

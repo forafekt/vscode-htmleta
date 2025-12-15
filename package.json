@@ -1,0 +1,23 @@
+{
+  "name": "vscode-htmleta-project",
+  "version": "1.0.0",
+  "description": "HTML with Eta syntax highlighting",
+  "license": "ISC",
+  "author": "Jonny Doyle <jonnydoyle23@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forafekt/vscode-htmleta.git"
+  },
+  "type": "module",
+  "main": "src/extension.js",
+
+  "scripts": {
+    "package": "cd src && npx vsce package",
+    "publish": "cd src && npx vsce publish"
+  },
+
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "vscode": "^1.1.37"
+  }
+}

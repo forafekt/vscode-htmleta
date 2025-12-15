@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Eta HTML",
+  "scopeName": "text.html.eta",
+  "injectionSelector": "L:text.html",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#eta-comment" },
+    { "include": "#eta-output-escaped" },
+    { "include": "#eta-output-unescaped" },
+    { "include": "#eta-scriptlet" }
+  ],
+  "repository": {
+    "keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"begin": "(<%[-_]?\\s*?(~|=)?)",
+					"end": "([-_]?%>)",
+					"contentName": "meta.embedded.block.javascript",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				},
+				{
+					"name": "html.eta",
+					"include": "text.html.derivative"
+				}
+			]
+		},
+    "eta-comment": {
+      "name": "comment.block.eta",
+      "begin": "<%#",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.comment.begin.eta" }
+      },
+      "end": "%>",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.comment.end.eta" }
+      }
+    },
+
+    "eta-output-escaped": {
+      "name": "meta.embedded.block.eta.escaped",
+      "begin": "<%=",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.eta.begin.escaped" }
+      },
+      "end": "%>",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.eta.end" }
+      },
+      "patterns": [
+        { "include": "source.js" }
+      ]
+    },
+
+    "eta-output-unescaped": {
+      "name": "meta.embedded.block.eta.unescaped",
+      "begin": "<%-",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.eta.begin.unescaped" }
+      },
+      "end": "%>",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.eta.end" }
+      },
+      "patterns": [
+        { "include": "source.js" }
+      ]
+    },
+
+    "eta-scriptlet": {
+      "name": "meta.embedded.block.eta",
+      "begin": "<%(?![#=-])",
+      "beginCaptures": {
+        "0": { "name": "punctuation.definition.eta.begin" }
+      },
+      "end": "%>",
+      "endCaptures": {
+        "0": { "name": "punctuation.definition.eta.end" }
+      },
+      "patterns": [
+        { "include": "source.js" }
+      ]
+    }
+  }
+}

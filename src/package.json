@@ -1,0 +1,72 @@
+{
+  "name": "vscode-htmleta",
+  "displayName": "vscode-htmleta",
+  "description": "HTML with Eta syntax highlighting, JS embedding, and file icons",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forafekt/vscode-htmleta.git"
+  },
+  "publisher": "jonnydoyle",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "eta",
+        "aliases": [
+          "Eta",
+          "eta"
+        ],
+        "extensions": [
+          ".eta"
+        ],
+        "icon": {
+          "light": "./icons/eta-light.svg",
+          "dark": "./icons/eta-dark.svg"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "eta",
+        "scopeName": "text.html.eta",
+        "path": "./syntaxes/eta.tmLanguage.json",
+        "injectTo": [
+          "text.html"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.eta": "eta",
+          "meta.embedded.block.javascript": "source.js"
+        },
+        "tokenTypes": {
+          "meta.embedded.block.javascript": "other"
+        }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/eta.json"
+      }
+    ],
+    "configurationDefaults": {
+      "files.associations": {
+        "*.eta": "html"
+      },
+      "emmet.includeLanguages": {
+        "html": "html"
+      }
+    }
+  }
+}
