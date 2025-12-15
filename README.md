@@ -1,4 +1,6 @@
-# Eta HTML Templates for VS Code
+![cover](src/icons/eta-light.svg)
+
+# vscode-htmleta
 
 > 🚧 **Development Status: Active / Experimental**
 > This project is currently **in active development**. APIs, behaviors, and features may change frequently. Use with the expectation of breaking changes between versions.
